@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kurdish:wght@400;700&display=swap" rel="stylesheet">    <title>طلب جواز سفر - الحكومة السورية</title>
+    <link rel="stylesheet" href="pasport.css">
+</head>
+<body>
+    <header class="syrian-header">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <header class="header">
+            <div class="header-container">
+                <div class="logo-container">
+                    <img src="logo.png" alt="شعار الحكومة" class="logo">
+                    <img src="syr.png" alt="شعار الجمهورية" class="gov-logo">
+                </div>
+                
+                <button class="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                
+                <img src="Flag_of_Syria_(2025-).svg.png" alt="علم سوريا" class="flag">
+                
+                <nav class="navbar">
+                    <a href="Index.html" class="active">الرئيسية</a>
+                    <a href="complaint.html" target="_blank">تقديم شكوى</a>
+                </nav>
+            </div>
+        </header>    
+        <main class="passport-main">
+            <div class="passport-progress">
+                <div class="progress-step active">1. معلومات أساسية</div>
+                <div class="progress-step">2. المستندات المطلوبة</div>
+                <div class="progress-step">3. المراجعة النهائية</div>
+            </div>
+        
+            <form id="passportForm" class="syrian-form">
+                <!-- الخطوة الأولى -->
+                <div class="form-step active">
+                    <h2><i class="fas fa-user"></i> المعلومات الشخصية</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>الاسم الكامل:</label>
+                            <input type="text" 
+                            data-translate-placeholder="forms.full_name_ph"
+
+           id="fullName"
+           name="fullName"
+           required
+           pattern="^[A-Za-z\s]{3,}(?:\s[A-Za-z\s]{3,})+$"
+           onkeypress="validateEnglish(event)"
+           oninput="sanitizeEnglish(this)"
+           title="الرجاء إدخال اسمك الكامل بالإنجليزية (اسم أول واسم عائلة)"
+           placeholder="Mohammad Abdullah">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label>تاريخ الميلاد:</label>
+                            <input type="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label>مكان الولادة:</label>
+                            <input type="text" required>
+                        </div>
+                    </div>
+                </div>
+        <!-- الخطوة الثانية -->
+<div class="form-step">
+    <h2><i class="fas fa-file-upload"></i> المستندات المطلوبة</h2>
+    <div class="upload-item">
+        <label>الهوية الوطنية:</label>
+        <div class="file-input-wrapper">
+            <input type="file" name="documents" accept="image/*, .pdf" required>
+            <button type="button" class="national-btn btn-secondary">
+                <i class="fas fa-upload btn-icon"></i>
+                اختر ملف
+            </button>
+        </div>
+    </div>
+</div>
+        
+                <!-- الخطوة الثالثة -->
+                <div class="form-step">
+                    <h2><i class="fas fa-check-double"></i> المراجعة النهائية</h2>
+                    <div class="review-summary">
+                        <div class="summary-item">
+                            <h3>المعلومات المدخلة:</h3>
+                            <div id="personalSummary"></div>
+                        </div>
+                        <div class="summary-item">
+                            <h3>المستندات المرفوعة:</h3>
+                            <div id="documentsSummary"></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="national-btn">
+                        <i class="fas fa-paper-plane btn-icon"></i>
+                        تأكيد وإرسال
+                    </button>
+                </div>
+        
+                <div class="form-navigation">
+                    <button type="button" class="nav-btn prev-btn">السابق</button>
+                    <button type="button" class="nav-btn next-btn">التالي</button>
+                </div>
+            </form>
+        </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo-container">
+                    <img src="logo.png" alt="شعار الحكومة" class="footer-logo">
+                    <p>الحكومة الخارجية السورية</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
+                    <li><a href="#services"><i class="fas fa-concierge-bell"></i> الخدمات</a></li>
+                    <li><a href="#history"><i class="fas fa-landmark"></i> المعالم</a></li>
+                    <li><a href="#contact"><i class="fas fa-phone"></i> اتصل بنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>معلومات الاتصال</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> دمشق، سوريا</li>
+                    <li><i class="fas fa-phone"></i> +963 11 123 4567</li>
+                    <li><i class="fas fa-envelope"></i> info@gov-sy.org</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>تابعنا</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 الحكومة الخارجية السورية. جميع الحقوق محفوظة.</p>
+            <p>تم تطوير الموقع بشكل تطوعي بيد سورية</p>
+        </div>
+    </footer>
+
+
+    <script src="passport.js"></script>
+</body>
+</html>

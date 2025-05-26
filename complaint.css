@@ -1,0 +1,600 @@
+:root {
+    --syrian-green: #007A3D; /* اللون الأخضر الأساسي */
+    --gold: #D4AF37;
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-gray: #F5F5F5;
+}
+
+
+.header {
+    background: var(--syrian-green) !important; /* إجبار اللون الأخضر */
+    box-shadow: 0 2px 10px rgba(0, 122, 61, 0.3); /* ظل أخضر */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+.gov-logo {
+    height: 35px;
+    width: auto;
+}
+
+.flag {
+    height: 40px;
+    width: auto;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    order: 3; /* العلم في النهاية */
+}
+
+.navbar {
+    background: var(--syrian-green) !important;
+
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    .navbar a:hover {
+        color: var(--gold) !important;
+        background: rgba(0, 122, 61, 0.2) !important;
+    }
+    }
+
+/* هامبرجر للجوال */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    border: 2px solid var(--syrian-green) !important;
+
+
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--gold);
+    margin: 5px 0;
+    transition: 0.3s;
+    background: var(--syrian-green) !important;
+
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        order: 2;
+    }
+    
+    .flag {
+        display: none;
+    }
+    
+    .navbar {
+        background: linear-gradient(
+            135deg,
+            var(--syrian-green),
+            #005a2c
+        ) !important;
+    }
+    
+    .navbar.active {
+        right: 0;
+    }
+    
+    .navbar a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+.complaint-form {
+    background: url('../images/syrian-pattern.png') repeat,
+                linear-gradient(to bottom, #f8f9fa, #fff);
+    border: 3px solid #007A3D;
+}
+
+.input-group input,
+.input-group textarea {
+    border: 2px solid #007A3D;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #CE1126;
+    box-shadow: 0 0 8px rgba(206, 17, 38, 0.3);
+}
+
+.form-section h2 {
+    color: #CE1126;
+    border-right: 4px solid #007A3D;
+    padding-right: 1rem;
+}
+
+            /* تنسيقات عامة للنماذج */
+.form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: linear-gradient(145deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 122, 61, 0.1);
+    border: 2px solid #007A3D;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        transparent 45%, 
+        rgba(206, 17, 38, 0.05) 50%, 
+        transparent 55%);
+    animation: form-shine 8s infinite linear;
+}
+
+@keyframes form-shine {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.form-title {
+    color: #007A3D;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.form-subtitle {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+/* تنسيق مجموعات الحقول */
+.form-group {
+    margin-bottom: 1.8rem;
+    position: relative;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: #2C2C2C;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding-right: 0.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.form-input:focus {
+    border-color: #007A3D;
+    box-shadow: 0 0 12px rgba(0, 122, 61, 0.15);
+    outline: none;
+    background: #ffffff;
+}
+
+/* تنسيق خاص للحقول المطلوبة */
+.form-input:required + .form-required-indicator::after {
+    content: "*";
+    color: #CE1126;
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+}
+
+/* تنسيق زر الإرسال */
+.submit-btn {
+    background: linear-gradient(135deg, #007A3D 0%, #005a2c 100%);
+    color: white;
+    padding: 1.2rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0, 122, 61, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 122, 61, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 12px rgba(0, 122, 61, 0.2);
+}
+
+.submit-btn i {
+    font-size: 1.3rem;
+}
+
+/* تنسيقات خاصة للاختيارات */
+.form-select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23007A3D"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat;
+    background-position: right 1rem center;
+    background-size: 12px;
+}
+
+/* تنسيقات للشريط التقدمي */
+.form-progress {
+    height: 4px;
+    background: #f0f0f0;
+    border-radius: 2px;
+    margin: 2rem 0;
+}
+
+.form-progress-bar {
+    height: 100%;
+    background: #007A3D;
+    border-radius: 2px;
+    transition: width 0.4s ease;
+}
+
+/* تنسيقات متجاوبة */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+    
+    .form-title {
+        font-size: 1.8rem;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* تأثيرات خاصة للحقول الصحيحة/الخاطئة */
+.form-input.valid {
+    border-color: #28a745 !important;
+}
+
+.form-input.invalid {
+    border-color: #CE1126 !important;
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(8px); }
+    75% { transform: translateX(-8px); }
+}
+
+/* تنسيقات وطنية للشكاوى */
+.complaint-main {
+    background: url('../images/syria-bg.jpg') center/cover;
+    min-height: 100vh;
+    padding: 4rem 0;
+}
+
+.patriotic-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, 
+        #CE1126 33%, 
+        #FFFFFF 33% 66%, 
+        #007A3D 66%);
+}
+
+.complaint-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 122, 61, 0.2);
+}
+
+.syrian-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.national-btn {
+    background: linear-gradient(135deg, #007A3D, #005a2c);
+    color: white;
+    padding: 1rem 3rem;
+    border: 2px solid #D4AF37;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.national-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 122, 61, 0.3);
+}
+/* تبديل اللغة */
+.language-switcher {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.lang-btn {
+    background: none;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover {
+    background: var(--gold);
+    color: var(--syrian-green);
+}
+
+[lang="ku"] body {
+    font-family: 'Noto Sans Kurdish', 'Tajawal', sans-serif;
+}
+/* الفوتر */
+.footer {
+    background-color: var(--syrian-green);
+    color: var(--white);
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: right;
+}
+
+.footer-section {
+    padding: 0 1.5rem;
+}
+
+.footer-logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    height: 100px;
+    width: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.footer h4 {
+    color: var(--gold);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    padding: 0.5rem;
+}
+
+.social-links a:hover {
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo-container {
+        margin-bottom: 15px;
+    }
+
+    .navbar {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gov-logo {
+        height: 40px;
+    }
+
+    .flag {
+        height: 30px;
+    }
+
+    .hero {
+        height: 70vh;
+        min-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+    }
+
+    .services, .background-history {
+        padding: 3rem 1rem;
+    }
+
+    .services-grid, .sites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        padding: 3rem 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer h4::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .footer-links a {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300px 300px;
+    }
+}

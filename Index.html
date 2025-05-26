@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحكومة الخارجية السورية - الموقع الرسمي</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="logo.png" alt="شعار الحكومة" class="logo">
+                <img src="syr.png" alt="شعار الجمهورية" class="gov-logo">
+            </div>
+            <button class="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="navbar">
+                <a href="#home" class="active">الرئيسية</a>
+                <a href="#services">الخدمات</a>
+                <a href="#history">المعالم</a>
+                <a href="#contact">الاتصال</a>
+                <a href="complaint.html" target="_blank">تقديم شكوى</a>
+                <a href="passport.html" target="_blank">جواز السفر</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- قسم البطل (Hero) -->
+        <section class="hero" id="home">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="ssstik.io_@m.m.d100_1748094844681.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>مرحبًا بكم في الموقع الرسمي للحكومة الخارجية السورية</h1>
+                    <p>من حضارة الأجداد، إلى قوة الحاضر، نحو غدٍ يصنعه السوريون.</p>
+                    <button class="cta-button">استكشف الخدمات</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الخدمات -->
+        <section class="services" id="services">
+            <h2 class="section-title">خدماتنا الحكومية</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>الخدمات القنصلية</h3>
+                    <ul class="service-features">
+                        <li>إصدار وتجديد الجوازات</li>
+                        <li>توثيق الوثائق الرسمية</li>
+                        <li>خدمات التأشيرات</li>
+                    </ul>
+                    <button class="service-cta">المزيد</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>الشؤون القانونية</h3>
+                    <ul class="service-features">
+                        <li>توثيق العقود</li>
+                        <li>الإرشاد القانوني</li>
+                        <li>حل النزاعات</li>
+                    </ul>
+                    <button class="service-cta">المزيد</button>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>العلاقات الدولية</h3>
+                    <ul class="service-features">
+                        <li>تمثيل دبلوماسي</li>
+                        <li>اتفاقيات التعاون</li>
+                        <li>منظمات دولية</li>
+                    </ul>
+                    <button class="service-cta">المزيد</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم المعالم التاريخية -->
+        <section class="background-history" id="history">
+            <div class="syrian-heritage">
+                <h2 class="section-title">معالم سوريا التاريخية</h2>
+                <div class="region-filter">
+                    <button class="region-btn active" data-region="all">كل المناطق</button>
+                    <button class="region-btn" data-region="north">الشمال</button>
+                    <button class="region-btn" data-region="center">الوسط</button>
+                    <button class="region-btn" data-region="south">الجنوب</button>
+                    <button class="region-btn" data-region="east">الشرق</button>
+                </div>
+                <div class="sites-grid">
+ <!-- بطاقة دمشق -->
+            <div class="heritage-card" data-region="center" data-city="دمشق">
+              <div class="image-wrapper">
+                <img src="damascus.jpg" alt="دمشق القديمة">
+                <div class="badges">
+                  <span class="city-badge">دمشق</span>
+                  <span class="era-badge">إسلامي</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <h3>الجامع الأموي</h3>
+                <p class="card-desc">تاج عالراس! من أقدم وأجمل الجوامع بالعالم الإسلامي. بناه الوليد بن عبد الملك، ومكانه كان معبد روماني.</p>
+                <ul class="card-features">
+                  <li>يضم ضريح النبي يحيى عليه السلام</li>
+                  <li>فسيفساء رائعة تغطي الجدران</li>
+                  <li>قبة النسر الشهيرة</li>
+                </ul>
+                <div class="card-meta">
+                  <span class="year">705 م</span>
+                  <span class="location">دمشق القديمة</span>
+                </div>
+              </div>
+            </div>
+      
+            <!-- بطاقة حلب -->
+            <div class="heritage-card" data-region="north" data-city="حلب">
+              <div class="image-wrapper">
+                <img src="aleppo-citadel.jpg" alt="قلعة حلب">
+                <div class="badges">
+                  <span class="city-badge">حلب</span>
+                  <span class="era-badge">آشوري</span>
+                </div>
+              </div>
+              <div class="card-content">
+                <h3>قلعة حلب</h3>
+                <p class="card-desc">قلب التاريخ النابض، واحدة من أقدم القلاع بالعالم...</p>
+                <ul class="card-features">
+                  <li>مباني من العصور الوسطى</li>
+                  <li>إطلالة ساحرة على المدينة</li>
+                  <li>متحف أثري داخلي</li>
+                </ul>
+                <div class="card-meta">
+                  <span class="year">2000 ق.م</span>
+                  <span class="location">حلب القديمة</span>
+                </div>
+              </div>
+            </div>
+      
+            <div class="heritage-card" data-region="center" data-city="تدمر">
+                <div class="card-image">
+                  <img src="palmyra.jpg" alt="آثار تدمر" />
+                  <span class="city-badge">تدمر</span>
+                  <span class="era-badge">روماني</span>
+                </div>
+                <div class="card-content">
+                  <h3>آثار تدمر</h3>
+                  <p class="card-desc">جنة الصحراء القديمة، مدينة أثرية رومانية تحتضن الأعمدة والمعابد الرائعة.</p>
+                  <ul class="card-features">
+                    <li>كولوسيوم صغير</li>
+                    <li>معابد ذات نقوش فنية عالية</li>
+                    <li>شوارع مرصوفة بأحجار ضخمة</li>
+                  </ul>
+                  <div class="card-meta">
+                    <span class="year">1 قرن قبل الميلاد</span>
+                    <span class="location">صحراء حمص</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="heritage-card" data-region="north" data-city="معلولا">
+                <div class="card-image">
+                  <img src="der.jpg" alt="دير مار تقلا" />
+                  <span class="city-badge">معلولا</span>
+                  <span class="era-badge">مسيحي</span>
+                </div>
+                <div class="card-content">
+                  <h3>دير مار تقلا</h3>
+                  <p class="card-desc">واحة الروحانية، دير قديم يحكي تاريخ المسيحية في قلب جبال القلمون.</p>
+                  <ul class="card-features">
+                    <li>لغة آرامية ما زالت حية</li>
+                    <li>جدران مزينة بالفسيفساء</li>
+                    <li>مشاهد طبيعية خلابة</li>
+                  </ul>
+                  <div class="card-meta">
+                    <span class="year">القرن الرابع الميلادي</span>
+                    <span class="location">جبال القلمون</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="heritage-card" data-region="center" data-city="حمص">
+                <div class="card-image">
+                  <img src="hom.jpg" alt="قلعة الحصن" />
+                  <span class="city-badge">حمص</span>
+                  <span class="era-badge">صليبي</span>
+                </div>
+                <div class="card-content">
+                  <h3>قلعة الحصن</h3>
+                  <p class="card-desc">قلعة الفرسان المنيعة، صمدت في وجه الزمان والغزاة.</p>
+                  <ul class="card-features">
+                    <li>تحصينات متينة وأبراج مراقبة</li>
+                    <li>موقع استراتيجي مهم</li>
+                    <li>تاريخ حافل بالحروب والمعارك</li>
+                  </ul>
+                  <div class="card-meta">
+                    <span class="year">12 قرن ميلادي</span>
+                    <span class="location">حمص</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="heritage-card" data-region="east" data-city="دير الزور">
+                <div class="card-image">
+                  <img src="alzor.jpg" alt="نهر الفرات" />
+                  <span class="city-badge">دير الزور</span>
+                  <span class="era-badge">حديث</span>
+                </div>
+                <div class="card-content">
+                  <h3>نهر الفرات</h3>
+                  <p class="card-desc">شريان الحياة للسوريين، ينبوع الحضارة والخصب في الشرق السوري.</p>
+                  <ul class="card-features">
+                    <li>مشاهد طبيعية ساحرة</li>
+                    <li>مزارع شاسعة على ضفافه</li>
+                    <li>موقع استراتيجي اقتصادي</li>
+                  </ul>
+                  <div class="card-meta">
+                    <span class="year">حتى اليوم</span>
+                    <span class="location">شرق سوريا</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="heritage-card" data-region="center" data-city="تدمر">
+                <div class="card-image">
+                  <img src="tadmur.jpg" alt="قصر العرش" />
+                  <span class="city-badge">تدمر</span>
+                  <span class="era-badge">روماني</span>
+                </div>
+                <div class="card-content">
+                  <h3>قصر العرش</h3>
+                  <p class="card-desc">قصر فخم تزينه الأعمدة والمنحوتات الرومانية العتيقة.</p>
+                  <ul class="card-features">
+                    <li>تصميم معماري مدهش</li>
+                    <li>إطلالة على الصحراء</li>
+                    <li>شواهد تاريخية أثرية</li>
+                  </ul>
+                  <div class="card-meta">
+                    <span class="year">القرن الأول الميلادي</span>
+                    <span class="location">تدمر</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="heritage-card" data-region="south" data-city="درعا">
+                <div class="card-image">
+                  <img src="daraa.jpg" alt="مسرح بصرى" />
+                  <span class="city-badge">بصرى</span>
+                  <span class="era-badge">روماني</span>
+                </div>
+                <div class="card-content">
+                  <h3>مسرح بصرى</h3>
+                  <p class="card-desc">فيها مسرح روماني كامل، يُعتبر من الأجمل والأفضل حفاظًا في العالم.</p>
+                  <ul class="card-features">
+                    <li>مبني من البازلت الأسود</li>
+                    <li>سعة 15000 متفرج</li>
+                    <li>أكروبول المدينة القديمة</li>
+                  </ul>
+                  <div class="card-meta">
+                    <span class="year">القرن 2 م</span>
+                    <span class="location">بصرى الشام</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="heritage-card" data-region="south" data-city="السويداء">
+                <div class="card-image">
+                  <img src="swedaa.jpg" alt="قنوات الأثرية" />
+                  <span class="city-badge">قنوات</span>
+                  <span class="era-badge">روماني</span>
+                </div>
+                <div class="card-content">
+                  <h3>قنوات الأثرية</h3>
+                  <p class="card-desc">مدينة رومانية فيها آثار ومدرجات ونوافير، وحجارة سوداء تحكي عن مجد الأنباط والرومان.</p>
+                  <ul class="card-features">
+                    <li>معبد زيوس</li>
+                    <li>شارع الأعمدة</li>
+                    <li>المسرح الروماني</li>
+                  </ul>
+                  <div class="card-meta">
+                    <span class="year">القرن 1 م</span>
+                    <span class="location">محافظة السويداء</span>
+                  </div>
+                     </div>
+            </div>
+        </section>
+    </main>
+<section class="footerr" id="contact"></section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo-container">
+                    <img src="logo.png" alt="شعار الحكومة" class="footer-logo">
+                    <p>الحكومة الخارجية السورية</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>معلومات الاتصال</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> دمشق، سوريا</li>
+                    <li><i class="fas fa-phone"></i> +963 11 123 4567</li>
+                    <li><i class="fas fa-envelope"></i> info@gov-sy.org</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>تابعنا</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 الحكومة الخارجية السورية. جميع الحقوق محفوظة.</p>
+            <p>تم تطوير الموقع بشكل تطوعي بيد سورية</p>
+        </div>
+    </footer>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>

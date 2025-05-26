@@ -1,0 +1,635 @@
+:root {
+    --syrian-green: #007A3D;
+    --gold: #D4AF37;
+    --white: #FFFFFF;
+    --black: #000000;
+    --light-gray: #F5F5F5;
+}
+
+
+.header {
+    background: var(--syrian-green) !important; /* إجبار اللون الأخضر */
+    box-shadow: 0 2px 10px rgba(0, 122, 61, 0.3); /* ظل أخضر */
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+}
+
+.gov-logo {
+    height: 35px;
+    width: auto;
+}
+
+.flag {
+    height: 40px;
+    width: auto;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    order: 3; /* العلم في النهاية */
+}
+
+.navbar {
+    background: var(--syrian-green) !important;
+
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    .navbar a:hover {
+        color: var(--gold) !important;
+        background: rgba(0, 122, 61, 0.2) !important;
+    }
+    }
+
+/* هامبرجر للجوال */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+    border: 2px solid var(--syrian-green) !important;
+
+
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--gold);
+    margin: 5px 0;
+    transition: 0.3s;
+    background: var(--syrian-green) !important;
+
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        order: 2;
+    }
+    
+    .flag {
+        display: none;
+    }
+    
+    .navbar {
+        background: linear-gradient(
+            135deg,
+            var(--syrian-green),
+            #005a2c
+        ) !important;
+    }
+    
+    .navbar.active {
+        right: 0;
+    }
+    
+    .navbar a {
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+
+/* تنسيقات جوازات وطنية */
+/* أزرار وطنية سورية */
+.national-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: linear-gradient(135deg, #007A3D, #005a2c);
+    color: #D4AF37;
+    box-shadow: 0 4px 15px rgba(0, 122, 61, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+.file-input-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-input-wrapper input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.file-name {
+    display: inline-block;
+    margin-right: 10px;
+    color: #666;
+    font-size: 0.9em;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ 
+  
+  .national-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 20px rgba(0, 122, 61, 0.4),
+        0 0 0 3px rgba(212, 175, 55, 0.2);
+    }
+
+
+.summary-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    border: 1px solid #e0e0e0;
+}
+
+.summary-item h3 {
+    color: #007A3D;
+    margin-bottom: 1rem;
+    border-right: 3px solid #D4AF37;
+    padding-right: 1rem;
+}
+
+/* تحسينات للجوال */
+@media (max-width: 768px) {
+    .document-upload {
+        padding: 1rem;
+    }
+    
+    .file-input-wrapper button {
+        width: 100%;
+    }
+    
+    .form-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-btn {
+        width: 100%;
+    }
+}
+
+/* تحسينات التحقق من الصحة */
+
+input:invalid {
+    border-color: #CE1126 !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23CE1126"><path d="M11 15h2v2h-2zm0-8h2v6h-2zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px;
+}
+
+input:valid {
+    border-color: #007A3D;
+}
+
+input:invalid::after {
+    content: "يجب أن يكون الاسم بالإنجليزية فقط";
+    color: #CE1126;
+    font-size: 0.9rem;
+    position: absolute;
+    right: 0;
+    bottom: -1.5rem;}
+    /* تنسيقات رسائل الخطأ */
+.error-tooltip {
+    position: absolute;
+    background: #CE1126;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    top: 100%;
+    right: 0;
+    margin-top: 5px;
+    z-index: 100;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(8px); }
+    75% { transform: translateX(-8px); }
+}
+
+/* تأثير الـ Active */
+.national-btn:active {
+    transform: translateY(0);
+
+}
+
+/* الشريط الذهبي المتحرك */
+.national-btn::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 45%,
+        rgba(212, 175, 55, 0.3) 50%,
+        transparent 55%
+    );
+    animation: btn-shine 3s infinite linear;
+}
+
+/* الأنيميشن */
+@keyframes btn-shine {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* حجم الأزرار المختلفة */
+.btn-sm {
+    padding: 0.8rem 1.8rem;
+    font-size: 0.9rem;
+}
+
+.btn-lg {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+}
+
+/* أزرار خاصة بالحالات */
+.btn-secondary {
+    background: linear-gradient(135deg, #CE1126, #a50d20);
+    color: #fff;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #007A3D;
+    color: #007A3D;
+}
+
+.btn-disabled {
+    background: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* أيقونات الأزرار */
+.btn-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+.national-btn:hover .btn-icon {
+    transform: translateX(5px);
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 768px) {
+    .national-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+.passport-main {
+    padding: 4rem 2rem;
+}
+
+.passport-progress {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.progress-step {
+    padding: 1rem 2rem;
+    border: 2px solid #007A3D;
+    border-radius: 30px;
+    position: relative;
+    background: white;
+}
+
+.progress-step.active {
+    background: #007A3D;
+    color: white;
+    border-color: #D4AF37;
+}
+
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.document-upload {
+    border: 2px dashed #007A3D;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.upload-item {
+    margin: 1.5rem 0;
+}
+
+.upload-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #007A3D;
+    font-weight: 600;
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.nav-btn {
+    background: #D4AF37;
+    color: #2C2C2C;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    background: #007A3D;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* الفوتر */
+.footer {
+    background-color: var(--syrian-green);
+    color: var(--white);
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: right;
+}
+
+.footer-section {
+    padding: 0 1.5rem;
+}
+
+.footer-logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.footer-logo {
+    height: 100px;
+    width: auto;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+.footer h4 {
+    color: var(--gold);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer h4::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+    transform: translateX(5px);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1.8rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    padding: 0.5rem;
+}
+
+.social-links a:hover {
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* التصميم المتجاوب */
+@media (max-width: 992px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo-container {
+        margin-bottom: 15px;
+    }
+
+    .navbar {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gov-logo {
+        height: 40px;
+    }
+
+    .flag {
+        height: 30px;
+    }
+
+    .hero {
+        height: 70vh;
+        min-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 10px 25px;
+    }
+
+    .services, .background-history {
+        padding: 3rem 1rem;
+    }
+
+    .services-grid, .sites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .footer {
+        padding: 3rem 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer h4::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .footer-links a {
+        justify-content: center;
+    }
+
+    .footer-logo {
+        height: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 300px 300px;
+    }
+}
+@media (max-width: 480px) {
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-logo {
+        height: 70px;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
+    }
+}
