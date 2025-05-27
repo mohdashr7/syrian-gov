@@ -7,9 +7,10 @@
 }
 
 
-.header {
-    background: var(--syrian-green) !important; /* إجبار اللون الأخضر */
-    box-shadow: 0 2px 10px rgba(0, 122, 61, 0.3); /* ظل أخضر */
+.syrian-header {
+    background: var(--syrian-green);
+    position: relative;
+    z-index: 1000;
 }
 
 .header-container {
@@ -68,7 +69,7 @@
 
 /* هامبرجر للجوال */
 .hamburger-menu {
-  display: none;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
     width: 2rem;
@@ -77,7 +78,8 @@
     border: none;
     cursor: pointer;
     padding: 0;
-    z-index: 10;
+    z-index: 1001;
+    order: 2; /* وضع الزر بعد اللوجوهات */
 }
 
 .hamburger-menu .bar {
@@ -98,16 +100,15 @@
     }
     
     .navbar {
-             position: fixed;
-        top: 70px;
+    position: fixed;
+        top: 90px; /* تعديل حسب ارتفاع الهيدر */
         right: -100%;
+        width: 80%;
+        height: calc(100vh - 90px);
+        background: var(--syrian-green);
         flex-direction: column;
-        background: white;
-        width: 100%;
-        text-align: center;
         padding: 2rem;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-        transition: 0.3s;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.2);
 
     }
     
@@ -116,8 +117,12 @@
     }
     
     .navbar a {
-      padding: 1rem;
-        border-bottom: 1px solid #eee;
+   color: white !important;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .flag {
+        display: none;
     }
 }
 
