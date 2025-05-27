@@ -29,15 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-     const hamburger = document.querySelector('.hamburger-menu');
-    const navbar = document.querySelector('.navbar');
-
-    hamburger.addEventListener('click', () => {
-        // تبديل الأنيميشن
-        hamburger.classList.toggle('active');
-        // تبديل ظهور القائمة
-        navbar.classList.toggle('active');
-    });
+    
 
 });
   
