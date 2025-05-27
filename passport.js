@@ -127,27 +127,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateForm();
 });
-// ===== هامبرغر مينيو =====
-    const hamburger = document.querySelector('.hamburger-menu');
-    const navMenu = document.querySelector('.navbar');
-    
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-    
-    document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
-    
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-    });
 });
