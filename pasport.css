@@ -47,8 +47,8 @@
 }
 
 .navbar {
-    background: var(--syrian-green) !important;
-
+ display: flex;
+    gap: 2rem;
 }
 
 .navbar a {
@@ -68,33 +68,29 @@
 
 /* هامبرجر للجوال */
 .hamburger-menu {
-    display: none;
-    background: none;
+  display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
     border: none;
     cursor: pointer;
-    padding: 10px;
-    z-index: 1001;
-    border: 2px solid var(--syrian-green) !important;
-
-
+    padding: 0;
+    z-index: 10;
 }
 
 .hamburger-menu .bar {
-    display: block;
-    width: 30px;
+  width: 100%;
     height: 3px;
-    background: var(--gold);
-    margin: 5px 0;
-    transition: 0.3s;
-    background: var(--syrian-green) !important;
-
+    background: #333;
+    transition: all 0.3s linear;
 }
 
 /* التصميم المتجاوب */
 @media (max-width: 768px) {
     .hamburger-menu {
-        display: block;
-        order: 2;
+        display: flex;
     }
     
     .flag {
@@ -102,11 +98,17 @@
     }
     
     .navbar {
-        background: linear-gradient(
-            135deg,
-            var(--syrian-green),
-            #005a2c
-        ) !important;
+             position: fixed;
+        top: 70px;
+        right: -100%;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        text-align: center;
+        padding: 2rem;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        transition: 0.3s;
+
     }
     
     .navbar.active {
@@ -114,10 +116,8 @@
     }
     
     .navbar a {
-        width: 100%;
-        text-align: center;
-        padding: 15px;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 1rem;
+        border-bottom: 1px solid #eee;
     }
 }
 
