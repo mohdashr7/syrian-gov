@@ -127,21 +127,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateForm();
 });
- // تبديل القائمة
-    hamburger.addEventListener('click', () => {
+// ===== هامبرغر مينيو =====
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.navbar');
+    
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
     });
     
-    // إغلاق القائمة عند النقر خارجها
     document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
         }
     });
     
-    // إغلاق القائمة عند تغيير حجم النافذة
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768) {
             hamburger.classList.remove('active');
