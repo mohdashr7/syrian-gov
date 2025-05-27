@@ -318,18 +318,6 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* أنيميشن تحويل الهامبرجر إلى X */
-.hamburger-menu.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger-menu.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger-menu.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
 
 .bar {
     transition: all 0.3s ease; /* إضافة انتقال سلس */
