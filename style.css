@@ -319,11 +319,8 @@ body {
 }
 
 /* التصميم المتجاوب */
+/* للجوال - الشاشات الصغيرة */
 @media (max-width: 768px) {
-    .hamburger-menu {
-        display: block;
-    }
-
     .navbar {
         display: none;
         position: absolute;
@@ -331,15 +328,23 @@ body {
         left: 0;
         right: 0;
         background: var(--syrian-green);
-        flex-direction: column;
-        padding: 1rem;
     }
 
-    .navbar.active {
-        display: flex;
+    .hamburger-menu {
+        display: block; /* إظهار الأيقونة على الجوال فقط */
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar {
+        display: flex !important; /* إجبار الظهور على الكمبيوتر */
+        position: static; /* إعادة التعيين */
+        flex-direction: row;
+        background: transparent;
+        padding: 0;
     }
 
-    .hero-content h1 {
-        font-size: 1.8rem;
+    .hamburger-menu {
+        display: none; /* إخفاء أيقونة الهامبرجر على الكمبيوتر */
     }
 }
