@@ -29,9 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-});
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger-menu');
+     const hamburger = document.querySelector('.hamburger-menu');
     const navbar = document.querySelector('.navbar');
 
     hamburger.addEventListener('click', () => {
@@ -40,4 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // تبديل ظهور القائمة
         navbar.classList.toggle('active');
     });
+
 });
+  
+
